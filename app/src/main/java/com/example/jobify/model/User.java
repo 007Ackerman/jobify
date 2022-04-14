@@ -1,4 +1,4 @@
-package com.example.jobify;
+package com.example.jobify.model;
 
 public class User {
     private String name,email,pass,phone;
