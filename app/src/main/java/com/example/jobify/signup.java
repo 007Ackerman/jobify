@@ -72,11 +72,12 @@ public class signup extends AppCompatActivity {
                                         .document(uname).set(obj).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
-                                        Toast.makeText(signup.this,"Account is Created",Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(signup.this,login.class));
+
+
                                     }
                                 });
-
+                                Toast.makeText(signup.this,"Account is Created",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(signup.this,login.class));
                             }
                             else
                             {

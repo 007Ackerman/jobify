@@ -1,7 +1,7 @@
 package com.example.jobify;
 
 public class User {
-    private String name,email,pass,phone,dob;
+    private String name,email,pass,phone;
     public User() {
     }
 
