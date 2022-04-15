@@ -45,7 +45,7 @@ public class SignINActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            startActivity(new Intent(SignINActivity.this,home.class));
+                            startActivity(new Intent(SignINActivity.this, DashBoardActivity.class));
                             Toast.makeText(SignINActivity.this,"Logged In",Toast.LENGTH_SHORT).show();
 
                         }else
