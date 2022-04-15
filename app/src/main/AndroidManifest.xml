@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".home"
+            android:name=".DashBoardActivity"
             android:exported="false" />
         <activity
             android:name=".SignINActivity"
