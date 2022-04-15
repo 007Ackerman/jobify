@@ -22,10 +22,10 @@
             android:name=".home"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name=".SignINActivity"
             android:exported="false" />
         <activity
-            android:name=".signup"
+            android:name=".SignupActivity"
             android:exported="false">
 
         </activity>

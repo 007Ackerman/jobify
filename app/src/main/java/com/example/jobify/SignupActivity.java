@@ -18,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class signup extends AppCompatActivity {
+public class SignupActivity extends AppCompatActivity {
     FirebaseAuth auth;
     EditText name,email,phone,pass,pass1;
     Button signup;
@@ -77,12 +77,12 @@ public class signup extends AppCompatActivity {
 
                                     }
                                 });
-                                Toast.makeText(signup.this,"Account is Created",Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(signup.this,login.class));
+                                Toast.makeText(SignupActivity.this,"Account is Created",Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(SignupActivity.this, SignINActivity.class));
                             }
                             else
                             {
-                                Toast.makeText(signup.this,task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
+                                Toast.makeText(SignupActivity.this,task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
@@ -90,7 +90,7 @@ public class signup extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(signup.this,"Password does not match with Confirm Password",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignupActivity.this,"Password does not match with Confirm Password",Toast.LENGTH_SHORT).show();
                 }
 
 

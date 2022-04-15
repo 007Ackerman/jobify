@@ -16,7 +16,7 @@ public class SplashActivity extends AppCompatActivity {
         int secondsDelayed = 3;
         new Handler().postDelayed(new Runnable() {
             public void run() {
-                startActivity(new Intent(SplashActivity.this, signup.class));
+                startActivity(new Intent(SplashActivity.this, SignupActivity.class));
                 finish();
             }
         }, secondsDelayed * 1000);
