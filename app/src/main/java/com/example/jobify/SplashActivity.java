@@ -50,6 +50,7 @@ public class SplashActivity extends AppCompatActivity {
             //user not logged in
             //start main screen
             startActivity(new Intent(SplashActivity.this, IntroActivity.class));
+            finish();
         }
         else
         {

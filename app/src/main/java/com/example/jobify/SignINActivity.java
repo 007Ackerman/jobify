@@ -42,6 +42,7 @@ public class SignINActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding= ActivitySigninBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().hide();
 
         //init firebase Auth
         firebaseAuth=FirebaseAuth.getInstance();
