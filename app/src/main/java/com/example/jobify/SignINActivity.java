@@ -15,7 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class login extends AppCompatActivity {
+public class SignINActivity extends AppCompatActivity {
 
     FirebaseAuth auth;
     EditText email,pass;
@@ -24,7 +24,7 @@ public class login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signin);
         getSupportActionBar().hide();
 
 
@@ -45,12 +45,12 @@ public class login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful())
                         {
-                            startActivity(new Intent(login.this,home.class));
-                            Toast.makeText(login.this,"Logged In",Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(SignINActivity.this,home.class));
+                            Toast.makeText(SignINActivity.this,"Logged In",Toast.LENGTH_SHORT).show();
 
                         }else
                         {
-                            Toast.makeText(login.this,task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignINActivity.this,task.getException().getLocalizedMessage(),Toast.LENGTH_SHORT).show();
                         }
                         }
                     });
