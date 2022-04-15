@@ -34,6 +34,7 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(IntroActivity.this,SignupActivity.class));
+
                 /*int autoSave = 1;
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putInt("key", autoSave);
@@ -45,7 +46,9 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(IntroActivity.this,SignINActivity.class));
+
             }
+
         });
 
 

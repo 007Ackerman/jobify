@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 import com.example.jobify.databinding.ActivitySignupBinding;
 import com.example.jobify.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -40,6 +41,7 @@ public class SignupActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding= ActivitySignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().hide();
 
         auth=FirebaseAuth.getInstance();
         database= FirebaseFirestore.getInstance();
@@ -56,6 +58,13 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
+           binding.gotosignin.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View view) {
+                   startActivity(new Intent(SignupActivity.this, SignINActivity.class));
+                   finish();
+               }
+           });
 
 
        /* signup.setOnClickListener(new View.OnClickListener() {
