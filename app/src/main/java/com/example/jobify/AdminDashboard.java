@@ -31,7 +31,9 @@ public class AdminDashboard extends AppCompatActivity
         binding.notif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent=new Intent(AdminDashboard.this,AdminDashboardActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
