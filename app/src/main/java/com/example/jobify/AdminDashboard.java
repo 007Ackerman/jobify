@@ -16,7 +16,7 @@ import com.example.jobify.databinding.ActivitySigninBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class AdminDashboard extends AppCompatActivity
+public class AdminDashboard extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener
 {
     private FirebaseAuth firebaseAuth;
     private ActivityAdminDashboard2Binding binding;

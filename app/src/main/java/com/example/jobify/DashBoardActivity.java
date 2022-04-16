@@ -66,8 +66,7 @@ public class DashBoardActivity extends AppCompatActivity {
     }
 
 
-  /*  private void checkUser() {
-=======
+
     private void loadJobs() {
 
         //init arrayList
@@ -113,10 +112,10 @@ public class DashBoardActivity extends AppCompatActivity {
     }
 
     private void checkUserwetherLogInOrNot() {
-        FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
-        if (firebaseUser==null){
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        if (firebaseUser == null) {
             //not login , goto main screen
-            startActivity(new Intent(DashBoardActivity.this,IntroActivity.class));
+            startActivity(new Intent(DashBoardActivity.this, IntroActivity.class));
             finish();
         }
        /* else
@@ -126,10 +125,10 @@ public class DashBoardActivity extends AppCompatActivity {
 
             //get in textview of toolbar
             binding.subtitle.setText(email);
-        }*/
-    }
+        }
+    }*/
 
-    private void checkUser() {
+   /* private void checkUser() {
 
         FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
 
@@ -140,4 +139,5 @@ public class DashBoardActivity extends AppCompatActivity {
             finish();
         }
     }*/
+    }
 }
