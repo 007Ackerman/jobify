@@ -25,7 +25,7 @@ public class AdminDashboard extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= ActivityAdminDashboard2Binding.inflate(getLayoutInflater());
-
+        setContentView();
         getSupportActionBar().hide();
 
         binding.notif.setOnClickListener(new View.OnClickListener() {
