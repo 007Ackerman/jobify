@@ -39,16 +39,16 @@ public class DashBoardActivity extends AppCompatActivity {
         binding.notif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();
-                checkUser();
-
+                /*firebaseAuth.signOut();
+                checkUser();*/
+                startActivity(new Intent(DashBoardActivity.this,AdminDashboardActivity.class));
 
 
             }
         });
     }
 
-    private void checkUser() {
+  /*  private void checkUser() {
         FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
 
         if(firebaseUser==null){
@@ -57,5 +57,5 @@ public class DashBoardActivity extends AppCompatActivity {
             startActivity(new Intent(DashBoardActivity.this,IntroActivity.class));
             finish();
         }
-    }
+    }*/
 }
