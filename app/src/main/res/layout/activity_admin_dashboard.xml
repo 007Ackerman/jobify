@@ -65,7 +65,7 @@ tools:context=".AdminDashboardActivity">
             android:background="@drawable/round_back"
             android:hint="Enter job title"
             android:inputType="text"
-            android:maxLines="1"
+            android:maxLines="15"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:textColor="@color/black"
@@ -134,6 +134,25 @@ tools:context=".AdminDashboardActivity">
             android:paddingEnd="10dp"
             android:textColor="@color/black"
             android:textColorHint="@color/grey" />
+
+        <EditText
+            android:id="@+id/jobtype1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_back"
+            android:hint="Job Description "
+            android:inputType="textMultiLine"
+
+            android:maxLines="5"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey" />
+
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Submit"

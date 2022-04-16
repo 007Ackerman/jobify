@@ -140,7 +140,7 @@ public class SignINActivity extends AppCompatActivity {
 
                         }else if(userType.equals("admin")){
                             //this the Admin , Open the Admin Dashboard
-                            startActivity(new Intent(SignINActivity.this, AdminDashboardActivity.class));
+                            startActivity(new Intent(SignINActivity.this, AdminDashboard.class));
                             finish();
                         }
                     }
