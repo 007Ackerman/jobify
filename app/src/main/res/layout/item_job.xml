@@ -41,7 +41,7 @@
                     app:strokeColor="#F1F1F1"
                     app:strokeWidth="0.5dp">
                     <ImageView
-                        android:id="@+id/photoPreview"
+                        android:id="@+id/imageView"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerInside"
@@ -69,6 +69,7 @@
                     android:layout_toEndOf="@id/photoPreviewLayout">
 
                     <TextView
+                        android:id="@+id/title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="title"
@@ -92,16 +93,18 @@
                             android:layout_marginEnd="5dp"
                             android:src="@drawable/ic_round_business_24"
                             app:tint="@color/gray_300"/>
+
                         <TextView
+                            android:id="@+id/company"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/iconCompany"
-                            android:text="company"
-                            android:textSize="12sp"
-                            android:textColor="@color/gray_400"
-                            android:singleLine="true"
                             android:ellipsize="end"
-                            android:fontFamily="@font/book"/>
+                            android:fontFamily="@font/book"
+                            android:singleLine="true"
+                            android:text="company"
+                            android:textColor="@color/gray_400"
+                            android:textSize="12sp" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -118,15 +121,16 @@
                             app:tint="@color/gray_300"/>
 
                         <TextView
+                            android:id="@+id/location"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_toEndOf="@id/iconLocation"
-                            android:text="location"
-                            android:textSize="12sp"
-                            android:textColor="@color/gray_400"
-                            android:singleLine="true"
                             android:ellipsize="end"
-                            android:fontFamily="@font/book"/>
+                            android:fontFamily="@font/book"
+                            android:singleLine="true"
+                            android:text="location"
+                            android:textColor="@color/gray_400"
+                            android:textSize="12sp" />
 
                     </RelativeLayout>
 
@@ -137,6 +141,7 @@
                         android:layout_marginStart="16dp">
 
                         <TextView
+                            android:id="@+id/jobtype"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:background="@drawable/bg_job_type"
@@ -150,20 +155,22 @@
                             android:text="type"
                             android:textColor="@color/green_200"
                             android:textSize="10sp" />
+
                         <TextView
+                            android:id="@+id/date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="formatDate"
-                            android:textSize="10sp"
                             android:layout_alignParentEnd="true"
-                            android:textColor="@color/gray_300"
-                            android:singleLine="true"
                             android:ellipsize="end"
                             android:fontFamily="@font/book"
                             android:paddingStart="6dp"
-                            android:paddingEnd="6dp"
                             android:paddingTop="2dp"
-                            android:paddingBottom="2dp"/>
+                            android:paddingEnd="6dp"
+                            android:paddingBottom="2dp"
+                            android:singleLine="true"
+                            android:text="formatDate"
+                            android:textColor="@color/gray_300"
+                            android:textSize="10sp" />
                     </RelativeLayout>
 
                 </LinearLayout>

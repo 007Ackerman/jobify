@@ -106,13 +106,14 @@ public class AdminDashboardActivity extends AppCompatActivity {
     }
 
 
-    private String jobTitle="",company="",location="",jobtype="",date="";
+    private String jobTitle="",company="",location="",jobtype="",date="" ,jobDes="";
     private void validationOfData() {
         jobTitle=binding.jobTitle.getText().toString().trim();
         company=binding.company.getText().toString().trim();
         location=binding.location.getText().toString().trim();
         jobtype=binding.jobtype.getText().toString().trim();
         date=binding.date.getText().toString().trim();
+        jobDes=binding.jobDes.getText().toString().trim();
 
 
         //validation if not empty
@@ -127,6 +128,9 @@ public class AdminDashboardActivity extends AppCompatActivity {
         }
         else if(TextUtils.isEmpty(jobtype)){
             Toast.makeText(this, "Please Enter Job-Type.....", Toast.LENGTH_SHORT).show();
+        }
+        else if(TextUtils.isEmpty(jobDes)){
+            Toast.makeText(this, "Please Describe the Job.....", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(date)){
             Toast.makeText(this, "Please Enter Post Date.....", Toast.LENGTH_SHORT).show();
@@ -195,6 +199,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
         hashMap.put("company",""+company);
         hashMap.put("jobtype",""+jobtype);
         hashMap.put("id",""+timestamp);
+        hashMap.put("jobDes",""+jobDes);
         hashMap.put("date",""+date);
         hashMap.put("url",""+uploadeLogoUrl);
 

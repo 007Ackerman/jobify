@@ -16,7 +16,7 @@ import com.example.jobify.databinding.ActivitySigninBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class AdminDashboard extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener
+public class AdminDashboard extends AppCompatActivity
 {
     private FirebaseAuth firebaseAuth;
     private ActivityAdminDashboard2Binding binding;
@@ -29,6 +29,7 @@ public class AdminDashboard extends AppCompatActivity implements PopupMenu.OnMen
         binding= ActivityAdminDashboard2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         getSupportActionBar().hide();
+
         firebaseAuth=FirebaseAuth.getInstance();
       binding.notif.setOnClickListener(new View.OnClickListener() {
            @Override
@@ -60,7 +61,9 @@ public class AdminDashboard extends AppCompatActivity implements PopupMenu.OnMen
         }
 
 
+
     }
+
 
 
     private void checkUser() {
@@ -83,4 +86,5 @@ public class AdminDashboard extends AppCompatActivity implements PopupMenu.OnMen
 
         return super.onCreateOptionsMenu(menu);
     }*/
+
 }
