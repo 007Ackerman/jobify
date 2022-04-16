@@ -136,7 +136,7 @@ tools:context=".AdminDashboardActivity">
             android:textColorHint="@color/grey" />
 
         <EditText
-            android:id="@+id/jobtype1"
+            android:id="@+id/jobDes"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_marginStart="10dp"

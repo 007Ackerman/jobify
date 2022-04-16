@@ -1,13 +1,13 @@
 package com.example.jobify.model;
 
 public class JobModel {
-    String jobTitle,company,location,jobtype,date,uid,url;
+    String jobTitle,company,location,jobtype,date,uid,url,jobDes;
     long timestamp;
 
     public JobModel() {
     }
 
-    public JobModel(String jobTitle, String company, String location, String jobtype, String date, String uid, String url, long timestamp) {
+    public JobModel(String jobTitle, String company, String location, String jobtype, String date, String uid, String url,String jobDes, long timestamp) {
         this.jobTitle = jobTitle;
         this.company = company;
         this.location = location;
@@ -16,10 +16,19 @@ public class JobModel {
         this.uid = uid;
         this.url = url;
         this.timestamp = timestamp;
+        this.jobDes=jobDes;
     }
 
     public String getJobTitle() {
         return jobTitle;
+    }
+
+    public void setJobDes(String jobDes) {
+        this.jobDes = jobDes;
+    }
+
+    public String getJobDes() {
+        return jobDes;
     }
 
     public void setJobTitle(String jobTitle) {
