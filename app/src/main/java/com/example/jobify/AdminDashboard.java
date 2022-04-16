@@ -25,10 +25,10 @@ public class AdminDashboard extends AppCompatActivity implements PopupMenu.OnMen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding= ActivityAdminDashboard2Binding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_admin_dashboard2);
+        setContentView(binding.getRoot());
         getSupportActionBar().hide();
 
-      /* binding.notif.setOnClickListener(new View.OnClickListener() {
+      binding.notif.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                PopupMenu popup=new PopupMenu(AdminDashboard.this,view);
@@ -36,7 +36,7 @@ public class AdminDashboard extends AppCompatActivity implements PopupMenu.OnMen
                popup.inflate(R.menu.sidemenu);
                popup.show();
            }
-       });*/
+       });
     }
 
 
@@ -47,7 +47,7 @@ public class AdminDashboard extends AppCompatActivity implements PopupMenu.OnMen
         switch(menuItem.getItemId())
         {
             case R.id.post:
-                startActivity(new Intent(AdminDashboard.this,DashBoardActivity.class));
+                startActivity(new Intent(AdminDashboard.this,AdminDashboardActivity.class));
                 return true;
             case R.id.logout:
                 return false;

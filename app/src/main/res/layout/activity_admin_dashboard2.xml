@@ -67,7 +67,7 @@
                         android:textColor="@color/white"
                         android:fontFamily="@font/bold" />
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/notif"
                         android:layout_width="26dp"
                         android:layout_height="40dp"
