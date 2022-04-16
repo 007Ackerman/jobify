@@ -75,7 +75,7 @@ public class SplashActivity extends AppCompatActivity {
 
                             }else if(userType.equals("admin")){
                                 //this the Admin , Open the Admin Dashboard
-                                startActivity(new Intent(SplashActivity.this,AdminDashboardActivity.class));
+                                startActivity(new Intent(SplashActivity.this,AdminDashboard.class));
                                 finish();
                             }
                         }
