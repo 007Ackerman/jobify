@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/drawable/ic_mark.xml" value="0.1795" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/drawable/ic_outline_location_on_24.xml" value="0.1795" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/drawable/ic_photo.xml" value="0.1795" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/drawable/ic_round_business_24.xml" value="0.1795" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/layout/activity_admin_dashboard.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/layout/activity_dashboard.xml" value="0.23854166666666668" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/layout/activity_signup.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/layout/item_job.xml" value="0.5" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/layout/item_job_loadding.xml" value="0.23854166666666668" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/layout/item_job_loading.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/layout/item_job_marked.xml" value="0.23854166666666668" />
+        <entry key="..\:/AndroidStudioProjects/jobify/app/src/main/res/layout/item_job_placeholder.xml" value="0.1824074074074074" />
         <entry key="..\:/Users/RAJ SRIVASTAVA/AndroidStudioProjects/jobify/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/RAJ SRIVASTAVA/AndroidStudioProjects/jobify/app/src/main/res/drawable/bg_job_type.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/RAJ SRIVASTAVA/AndroidStudioProjects/jobify/app/src/main/res/drawable/bg_photo_item.xml" value="0.1111111111111111" />
