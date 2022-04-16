@@ -26,7 +26,7 @@ public class AdminDashboard extends AppCompatActivity
         super.onCreate(savedInstanceState);
         binding= ActivityAdminDashboard2Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        getSupportActionBar();
 
         binding.notif.setOnClickListener(new View.OnClickListener() {
             @Override
