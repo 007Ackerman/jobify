@@ -1,11 +1,13 @@
 package com.example.jobify;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
+
 import android.view.View;
 
 import com.example.jobify.adapter.JobAdapter;
@@ -42,9 +44,15 @@ public class DashBoardActivity extends AppCompatActivity {
         binding=ActivityDashboardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-
         //Hiding the tool bar
         getSupportActionBar().hide();
+
+
+
+
+
+
+
 
         //init firebase Auth
         firebaseAuth=FirebaseAuth.getInstance();
@@ -135,5 +143,28 @@ public class DashBoardActivity extends AppCompatActivity {
             startActivity(new Intent(DashBoardActivity.this,IntroActivity.class));
             finish();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        final AlertDialog.Builder builder= new AlertDialog.Builder(DashBoardActivity.this);
+        builder.setMessage("Are you sure want to leave?");
+        builder.setCancelable(true);
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+
+        AlertDialog alertDialog=builder.create();
+        alertDialog.show();
+
     }
 }
