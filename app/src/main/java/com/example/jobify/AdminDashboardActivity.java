@@ -198,6 +198,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
         hashMap.put("jobTitle",""+jobTitle);
         hashMap.put("company",""+company);
         hashMap.put("jobtype",""+jobtype);
+        hashMap.put("location",""+location);
         hashMap.put("id",""+timestamp);
         hashMap.put("jobDes",""+jobDes);
         hashMap.put("date",""+date);
