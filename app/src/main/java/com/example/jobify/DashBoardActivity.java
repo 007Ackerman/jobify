@@ -163,7 +163,7 @@ public class DashBoardActivity extends AppCompatActivity {
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.cancel();
+                  dialogInterface.cancel();
             }
         });
 
