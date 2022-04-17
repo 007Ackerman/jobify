@@ -64,14 +64,16 @@ public class DashBoardActivity extends AppCompatActivity {
         binding.notif.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firebaseAuth.signOut();
-                checkUser();
-
+                /*firebaseAuth.signOut();
+                checkUser();*/
+                startActivity(new Intent(DashBoardActivity.this,AdminDashboardActivity.class));
 
 
             }
         });
     }
+
+
 
     private void loadJobs() {
 
@@ -118,10 +120,10 @@ public class DashBoardActivity extends AppCompatActivity {
     }
 
     private void checkUserwetherLogInOrNot() {
-        FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
-        if (firebaseUser==null){
+        FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+        if (firebaseUser == null) {
             //not login , goto main screen
-            startActivity(new Intent(DashBoardActivity.this,IntroActivity.class));
+            startActivity(new Intent(DashBoardActivity.this, IntroActivity.class));
             finish();
         }
        /* else
@@ -131,10 +133,11 @@ public class DashBoardActivity extends AppCompatActivity {
 
             //get in textview of toolbar
             binding.subtitle.setText(email);
-        }*/
-    }
+        }
+    }*/
 
-    private void checkUser() {
+   /* private void checkUser() {
+
         FirebaseUser firebaseUser= FirebaseAuth.getInstance().getCurrentUser();
 
         if(firebaseUser==null){
@@ -143,6 +146,7 @@ public class DashBoardActivity extends AppCompatActivity {
             startActivity(new Intent(DashBoardActivity.this,IntroActivity.class));
             finish();
         }
+    }*/
     }
 
     @Override

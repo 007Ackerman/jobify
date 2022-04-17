@@ -24,6 +24,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+
 import java.util.HashMap;
 import java.util.Locale;
 
@@ -158,7 +159,9 @@ public class AdminDashboardActivity extends AppCompatActivity {
         String filepathAndName ="LOGOS/"+timestamp;
 
         //storage refrence
-        StorageReference storageReference=FirebaseStorage.getInstance().getReference(filepathAndName);
+
+
+        StorageReference storageReference= FirebaseStorage.getInstance().getReference(filepathAndName);
         storageReference.putFile(img)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -195,6 +198,7 @@ public class AdminDashboardActivity extends AppCompatActivity {
         hashMap.put("jobTitle",""+jobTitle);
         hashMap.put("company",""+company);
         hashMap.put("jobtype",""+jobtype);
+        hashMap.put("location",""+location);
         hashMap.put("id",""+timestamp);
         hashMap.put("jobDes",""+jobDes);
         hashMap.put("date",""+date);
