@@ -1,6 +1,7 @@
 package com.example.jobify.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.example.jobify.AdminDashboard;
+import com.example.jobify.JobDetailsActivity;
 import com.example.jobify.databinding.ItemJobBinding;
 import com.example.jobify.model.JobModel;
 
@@ -46,8 +50,12 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.HolderJob> {
         String company=model.getCompany();
         String location=model.getLocation();
         String id=model.getUid();
+        String des=model.getJobDes();
         String date=model.getDate();
         String jobType=model.getJobtype();
+        String url=model.getUrl();
+
+
 
         //set data
         holder.title.setText(title);
@@ -55,6 +63,44 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.HolderJob> {
         holder.location.setText(location);
         holder.date.setText(date);
         holder.jobtype.setText(jobType);
+
+        Glide.with(holder.imageView.getContext()).load(url).into((ImageView) holder.imageView);
+
+        //for img
+       // Glide.with(holder.qualif.getContext()).load(data[position].getProfileImage()).into((ImageView) holder.imgs);
+
+       /* holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(context, JobDetailsActivity.class);
+                intent.putExtra("jobTitle",title);
+                intent.putExtra("companyName", company);
+                intent.putExtra("location",location);
+                intent.putExtra("date",date);
+                intent.putExtra("jobtype",jobType);
+                intent.putExtra("description",des);
+                context.startActivity(intent);
+
+
+            }
+        });*/
+
+       holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context, JobDetailsActivity.class);
+                intent.putExtra("jobTitle",title);
+                intent.putExtra("companyName", company);
+                intent.putExtra("location",location);
+                intent.putExtra("date",date);
+                intent.putExtra("jobtype",jobType);
+                intent.putExtra("description",des);
+                intent.putExtra("url",url);
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     @Override
