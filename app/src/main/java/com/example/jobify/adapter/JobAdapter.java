@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -69,22 +70,6 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.HolderJob> {
         //for img
        // Glide.with(holder.qualif.getContext()).load(data[position].getProfileImage()).into((ImageView) holder.imgs);
 
-       /* holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(context, JobDetailsActivity.class);
-                intent.putExtra("jobTitle",title);
-                intent.putExtra("companyName", company);
-                intent.putExtra("location",location);
-                intent.putExtra("date",date);
-                intent.putExtra("jobtype",jobType);
-                intent.putExtra("description",des);
-                context.startActivity(intent);
-
-
-            }
-        });*/
 
        holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,6 +98,7 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.HolderJob> {
 
         //UI view of item job
         TextView title,company,location,jobtype,date;
+        CardView cardView;
         ImageView imageView;
         public HolderJob(@NonNull View itemView) {
             super(itemView);
@@ -122,6 +108,7 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.HolderJob> {
             location=binding.location;
             jobtype=binding.jobtype;
             date=binding.date;
+            cardView=binding.card;
 
             imageView=binding.imageView;
 
