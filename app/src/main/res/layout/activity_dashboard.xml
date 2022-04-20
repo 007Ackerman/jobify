@@ -105,17 +105,19 @@
                         <RelativeLayout
                             android:layout_width="match_parent"
                             android:layout_height="60dp">
-                            <TextView
+
+                            <EditText
+                                android:id="@+id/filter"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="What are you looking for?"
-                                android:singleLine="true"
                                 android:layout_centerVertical="true"
                                 android:layout_marginStart="16dp"
                                 android:layout_marginEnd="16dp"
-                                android:textColor="@color/blue_050"
                                 android:fontFamily="@font/book"
-                                android:textSize="16dp"/>
+                                android:singleLine="true"
+                                android:text="What are you looking for?"
+                                android:textColor="@color/blue_050"
+                                android:textSize="16dp" />
                             <ImageView
                                 android:src="@drawable/ic_round_search_24"
                                 android:layout_width="25dp"

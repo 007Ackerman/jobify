@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,18 +18,23 @@ import com.bumptech.glide.Glide;
 import com.example.jobify.AdminDashboard;
 import com.example.jobify.JobDetailsActivity;
 import com.example.jobify.databinding.ItemJobBinding;
+import com.example.jobify.filter.FilterJob;
 import com.example.jobify.model.JobModel;
 
 import java.util.ArrayList;
 
-public class JobAdapter extends RecyclerView.Adapter<JobAdapter.HolderJob> {
+public class JobAdapter extends RecyclerView.Adapter<JobAdapter.HolderJob> implements Filterable {
 
     private Context context;
-    public ArrayList<JobModel> jobArrayList;
+    public ArrayList<JobModel> jobArrayList,filterList;
+
+    private FilterJob filterJob;
 
     public JobAdapter(Context context, ArrayList<JobModel> jobArrayList) {
         this.context = context;
         this.jobArrayList = jobArrayList;
+        this.filterList=jobArrayList;
+
     }
 
     //view binding
@@ -91,6 +98,15 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.HolderJob> {
     @Override
     public int getItemCount() {
         return jobArrayList.size() ;
+    }
+
+    @Override
+    public Filter getFilter() {
+        if (filterJob == null){
+           // filterUsersNotes = new FilterUsersNotes(filterList,this);
+            filterJob=new FilterJob(filterList,this);
+        }
+        return filterJob;
     }
 
     /*-------------------View holder class to hold UI views for item_job.xml---------------*/
