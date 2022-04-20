@@ -35,7 +35,7 @@ public class FilterJob extends Filter {
             for (int i=0; i<filterList.size();i++){
 
                 //validation
-                if (filterList.get(i).getCompany().toUpperCase().contains(constraint)){
+                if (filterList.get(i).getJobTitle().toUpperCase().contains(constraint)){
 
                     //add to filtered list
                     filteredModels.add(filterList.get(i));

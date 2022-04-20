@@ -114,8 +114,9 @@
                                 android:layout_marginStart="16dp"
                                 android:layout_marginEnd="16dp"
                                 android:fontFamily="@font/book"
+                                android:textColorHint="@color/white"
                                 android:singleLine="true"
-                                android:text="What are you looking for?"
+                                android:hint="What are you looking for?"
                                 android:textColor="@color/blue_050"
                                 android:textSize="16dp" />
                             <ImageView
