@@ -61,6 +61,10 @@ public class JobDetailsActivity extends AppCompatActivity {
 
 
 
+        //Unsave Job
+
+
+
 
 
     }
