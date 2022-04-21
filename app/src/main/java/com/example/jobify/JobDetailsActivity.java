@@ -43,8 +43,7 @@ public class JobDetailsActivity extends AppCompatActivity {
         description = intent.getStringExtra("description");
         img=intent.getStringExtra("url");
 
-
-
+        //Glide for img
         imageView=binding.companyLogo;
         Glide.with(imageView.getContext()).load(img).into((ImageView)imageView);
 
@@ -57,6 +56,12 @@ public class JobDetailsActivity extends AppCompatActivity {
         binding.location.setText(location);
         binding.company2.setText(companyName);
         binding.jobtype.setText(jobtype);
+
+        //Save job
+
+
+
+        //Unsave Job
 
 
 
