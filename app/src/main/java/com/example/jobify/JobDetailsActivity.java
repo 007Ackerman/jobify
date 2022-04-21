@@ -57,6 +57,8 @@ public class JobDetailsActivity extends AppCompatActivity {
         binding.company2.setText(companyName);
         binding.jobtype.setText(jobtype);
 
+        //Save job
+
 
 
 
