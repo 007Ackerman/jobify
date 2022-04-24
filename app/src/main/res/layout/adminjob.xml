@@ -172,17 +172,17 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@+id/mark"
-                    android:onClick="markJob"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:id="@+id/delete"
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/delete"
                     android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="markJob"
                     android:padding="3dp"
-                    app:tint="@color/gray_200"/>
+                    android:src="@drawable/delete"
+                    app:tint="@color/gray_200" />
 
             </RelativeLayout>
         </LinearLayout>

@@ -50,12 +50,6 @@ public class DashBoardActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
 
-
-
-
-
-
-
         //init firebase Auth
         firebaseAuth=FirebaseAuth.getInstance();
         checkUserwetherLogInOrNot();
