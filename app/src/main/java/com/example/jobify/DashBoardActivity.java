@@ -169,7 +169,7 @@ public class DashBoardActivity extends AppCompatActivity {
         }
     }*/
     }
-
+//Method for logout activity 
     @Override
     public void onBackPressed() {
         final AlertDialog.Builder builder= new AlertDialog.Builder(DashBoardActivity.this);
